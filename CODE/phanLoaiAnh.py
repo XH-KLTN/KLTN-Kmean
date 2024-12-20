@@ -11,11 +11,6 @@ def get_feature(img):
     intensity = intensity.sum(axis=0) / (255 * img.shape[0] * img.shape[1])
     return intensity
 def load_data(data_path=c_data_path):
-        X = []
-        L = []
-        for file in os.listdir(data_path):
-            c_x = get_feature(cv2.imread(os.path.join(data_path, file)))
-            X.append(c_x)
 
 
 X,L = load_data()

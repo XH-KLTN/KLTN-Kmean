@@ -12,7 +12,7 @@ def get_feature(img):
     return intensity
 def load_data(data_path=c_data_path):
 
-
+def load_data(data_path=c_data_path):
 X,L = load_data()
 #elbow
 distortions = []

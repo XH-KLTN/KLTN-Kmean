@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 
-c_data_path = "1"
-
 def get_feature(img):
     intensity = img.sum(axis=1)
     intensity = intensity.sum(axis=0) / (255 * img.shape[0] * img.shape[1])
@@ -18,10 +16,7 @@ def load_data(data_path=c_data_path):
         for file in os.listdir(data_path):
             c_x = get_feature(cv2.imread(os.path.join(data_path, file)))
             X.append(c_x)
-            L.append(file)
-        X = np.array(X)
-        L = np.array(L)
-        return X,L
+
 
 X,L = load_data()
 #elbow
